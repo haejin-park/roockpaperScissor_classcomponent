@@ -55,7 +55,7 @@ export default class AppClass extends Component {
       computer == "Rock" => user win 
       computer == "Scissors" => user lose
     */
-      if(user.name === computer.name) 
+    if(user.name === computer.name) 
       return "tie"
     else if(user.name === "Rock") 
       return computer.name === "Scissors"? "win": "lose" 
