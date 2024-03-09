@@ -37,24 +37,6 @@ export default class AppClass extends Component {
   }
 
   judgement = (user, computer) => {
-    console.log("user", user, "computer", computer);
-
-/*
-      user == computer  => tie
-
-      user == "Rock", 
-      computer == "Paper" => user lose
-      computer == "Scissors" => user win
-        
-
-      user == "Scissors", 
-      computer == "Paper" => user win
-      computer == "Rock" => user lose 
-
-      user == "Paper",
-      computer == "Rock" => user win 
-      computer == "Scissors" => user lose
-    */
     if(user.name === computer.name) 
       return "tie"
     else if(user.name === "Rock") 
@@ -66,12 +48,9 @@ export default class AppClass extends Component {
   };
 
   randomChoice = () => {
-    let itemArray = Object.keys(choice);//객체에 키값만 뽑아서 배열로 만들어주는 함수
-    console.log("itemsArray", itemArray);
+    let itemArray = Object.keys(choice);
     let randomItem = Math.floor(Math.random()* itemArray.length);    
-    console.log("randomItem", randomItem);
     let final = itemArray[randomItem];
-    console.log("final", final);
     return choice[final];
   };
  
